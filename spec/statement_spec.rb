@@ -20,4 +20,10 @@ describe Statement do
     subject.withdrawal_statement('14/01/2012', 500)
     expect(subject.account_statement).to eq [{Date: "14/01/2012", Credit_Debit: 500, Balance: 500}]
   end
+
+  it '#account_statement has deposit_statement and withdrawal_statement' do
+    subject.deposit_statement('10/01/2012', 1000)
+    subject.withdrawal_statement('14/01/2012', 500)
+    expect(subject.account_statement.length).to be(2)
+  end
 end
