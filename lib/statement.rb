@@ -1,5 +1,4 @@
 class Statement
-
   attr_reader :balance
 
   def initialize
@@ -8,5 +7,9 @@ class Statement
 
   def top_up(amount)
     @balance += amount
+  end
+
+  def withdraw(amount)
+    @balance -= amount
   end
 end

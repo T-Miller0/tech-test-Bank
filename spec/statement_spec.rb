@@ -5,7 +5,13 @@ describe Statement do
     expect(subject.balance).to eq 0
   end
 
-  it "User can #top_up" do
+  it 'User can #top_up' do
     expect(subject.top_up(100)).to eq 100
+  end
+
+  it 'User can #withdraw money' do
+    subject.top_up(100)
+    subject.withdraw(50)
+    expect(subject.balance).to eq 50
   end
 end
