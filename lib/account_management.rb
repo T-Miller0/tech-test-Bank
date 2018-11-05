@@ -2,7 +2,7 @@
 class AccountManagement
   attr_reader :balance
 
-  def initialize (balance = @balance)
+  def initialize(_balance = @balance)
     @balance = 0
   end
 
