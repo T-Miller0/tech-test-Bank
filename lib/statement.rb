@@ -1,15 +1,8 @@
+# Statment to show date, amount, balance
 class Statement
-  attr_reader :balance
+  attr_reader :account_statement
 
   def initialize
-    @balance = 0
-  end
-
-  def top_up(amount)
-    @balance += amount
-  end
-
-  def withdraw(amount)
-    @balance -= amount
+    @account_statement = []
   end
 end
