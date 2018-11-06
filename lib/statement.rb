@@ -13,7 +13,7 @@ class Statement
     @account_statement.push ({
       Date: new_date,
       Credit_Debit: account_management.top_up(amount),
-      Balance: account_management.balance
+      Balance: account_management.total_balance
     })
   end
 
@@ -21,7 +21,7 @@ class Statement
     @account_statement.push ({
       Date: new_date,
       Credit_Debit: account_management.withdraw(amount),
-      Balance: account_management.balance
+      Balance: account_management.total_balance
     })
   end
 end
