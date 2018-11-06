@@ -12,6 +12,6 @@ describe AccountManagement do
   it 'User can #withdraw money' do
     subject.top_up(100)
     subject.withdraw(50)
-    expect(subject.balance).to eq 50
+    expect(subject.balance).to eq -50
   end
 end
