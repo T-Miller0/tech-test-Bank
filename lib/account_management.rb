@@ -8,13 +8,14 @@ class AccountManagement
   end
 
   def top_up(amount)
+    fail "Please input a valid number" unless (amount.is_a? Float) || (amount.is_a? Integer)
     @total_balance += amount
     @balance = amount
   end
 
   def withdraw(amount)
-    return "Insufficient funds" if ((@balance -= amount) < 0)
-  else
+    fail "Please input a valid number" unless (amount.is_a? Float) || (amount.is_a? Integer)
+    fail "Insufficient funds, balance is #{@balance}" if ((@balance -= amount.to_f) < 0)
     @total_balance -= amount
     @balance = -amount
   end
