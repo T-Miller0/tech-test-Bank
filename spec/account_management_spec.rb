@@ -14,4 +14,8 @@ describe AccountManagement do
     subject.withdraw(50)
     expect(subject.balance).to eq -50
   end
+
+  it 'Error if total_balance is negative' do
+    expect(subject.withdraw(50)).to include ("Insufficient funds")
+  end
 end

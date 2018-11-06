@@ -2,7 +2,7 @@
 class AccountManagement
   attr_reader :balance, :total_balance
 
-  def initialize()
+  def initialize
     @balance = 0
     @total_balance = 0
   end
@@ -13,6 +13,8 @@ class AccountManagement
   end
 
   def withdraw(amount)
+    return "Insufficient funds" if ((@balance -= amount) < 0)
+  else
     @total_balance -= amount
     @balance = -amount
   end
