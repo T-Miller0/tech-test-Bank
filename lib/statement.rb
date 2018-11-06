@@ -12,7 +12,7 @@ class Statement
   def deposit_statement(new_date, amount)
     @account_statement.push ({
       Date: new_date,
-      Credit_Debit: account_management.top_up(amount),
+      Credit: account_management.top_up(amount),
       Balance: account_management.total_balance
     })
   end
@@ -20,7 +20,7 @@ class Statement
   def withdrawal_statement(new_date, amount)
     @account_statement.push ({
       Date: new_date,
-      Credit_Debit: account_management.withdraw(amount),
+      Debit: account_management.withdraw(amount),
       Balance: account_management.total_balance
     })
   end
