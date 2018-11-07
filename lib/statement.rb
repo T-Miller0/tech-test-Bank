@@ -6,7 +6,7 @@ require_relative 'print_statement'
 class Statement
   attr_reader :account_statement, :account_management
 
-  def initialize(account_management = AccountManagement.new,\
+  def initialize(account_management = AccountManagement.new,
      print_statement = PrintStatement.new)
     @account_statement = []
     @account_management = account_management
