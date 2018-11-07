@@ -1,9 +1,6 @@
-require_relative 'statement'
-
 class PrintStatement
-
   def my_statement(account_statement)
-    puts "date || credit || debit || balance"
+    puts 'date || credit || debit || balance'
     account_statement.each do |value|
       d = value[:Date]
       cr = format_num (value[:Credit])
@@ -11,14 +8,16 @@ class PrintStatement
       bal = format_num (value[:Balance])
       puts "#{d} || #{cr} || #{deb} || #{bal}"
     end
-    return true
+    true
   end
 
+  private
+
   def format_num(num)
-    if num == nil
-      return ""
+    if num.nil?
+      ''
     else
-      return format('%.2f', num)
+      format('%.2f', num)
     end
   end
 end
