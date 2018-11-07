@@ -7,7 +7,8 @@ describe Statement do
 
   it 'Deposit shows date, amount and total balance' do
     subject.deposit_statement('10/01/2012', 1000)
-    expect(subject.account_statement).to eq [{ Date: '10/01/2012', Credit: 1000.00, Balance: 1000 }]
+    expect(subject.account_statement).to eq [{ Date: '10/01/2012', \
+                                               Credit: 1000.00, Balance: 1000 }]
   end
 
   it 'After a deposit account_statement is not empty' do
@@ -49,7 +50,6 @@ describe Statement do
     prt_statement = double(PrintStatement)
     acc_management = double(AccountManagement)
     statement = Statement.new(acc_management, prt_statement)
-    test_stat = '10/01/2012 || 1000.00 ||  || 1000.00'
 
     expect(prt_statement).to receive(:my_statement).with([])
 
