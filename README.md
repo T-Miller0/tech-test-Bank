@@ -80,5 +80,5 @@ I would like to see all my transactions
 Tom Miller
 
 
-Inline-style: 
-![alt text](file:///Users/tommiller/Downloads/Bank_model.html)
+
+![alt text](https://github.com/T-Miller0/models/blob/master/Bank_model.png)
