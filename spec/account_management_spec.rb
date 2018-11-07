@@ -1,18 +1,14 @@
 require 'account_management'
 
 describe AccountManagement do
-  it 'User has a balance' do
-    expect(subject.balance).to eq 0
-  end
-
   it 'User can #top_up' do
-    expect(subject.top_up(100)).to eq 100
+    expect(subject.top_up(100)).to eq 100.00
   end
 
   it 'User can #withdraw money' do
     subject.top_up(100)
     subject.withdraw(50)
-    expect(subject.balance).to eq -50
+    expect(subject.balance).to eq 50.00
   end
 
   it 'Error if total_balance is negative' do
@@ -25,5 +21,9 @@ describe AccountManagement do
 
   it 'Error if inputs a top_up that is not a interger or float ' do
     expect{subject.top_up("Goodbye")}.to raise_error(RuntimeError)
+  end
+
+  it 'User enters a valid_amount' do
+    expect(subject.valid_amount(100)).to eq ('%.2f' % 100)
   end
 end
