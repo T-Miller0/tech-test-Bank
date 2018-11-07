@@ -40,21 +40,21 @@ Simplecov
 
 # User Stories
 
-In order to view the sum.
-As a user.
-I would like to view my balance.
+In order to view the sum --
+As a user --
+I would like to view my balance
 
-In order to view the new sum.
-As a user.
-I would like to deposit money.
+In order to view the new sum
+As a user
+I would like to deposit money
 
-In order to spend money.
-As a User.
-I would like to withdraw money.
+In order to spend money
+As a User
+I would like to withdraw money
 
-In order to see the history of transactions.
-As a User.
-I would like to see the date.
+In order to see the history of transactions
+As a User
+I would like to see the date
 
 So I can see the history of all my transactions
 As a User
