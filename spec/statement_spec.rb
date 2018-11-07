@@ -44,4 +44,15 @@ describe Statement do
     subject.withdrawal_statement('14/01/2012', 500)
     expect(subject.account_statement.length).to be(2)
   end
+
+  it 'show_statement allows user to print their account_statement' do
+    prt_statement = double(PrintStatement)
+    acc_management = double(AccountManagement)
+    statement = Statement.new(acc_management, prt_statement)
+    test_stat = '10/01/2012 || 1000.00 ||  || 1000.00'
+
+    expect(prt_statement).to receive(:my_statement).with([])
+
+    statement.show_statement
+  end
 end

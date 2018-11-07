@@ -1,12 +1,15 @@
 require_relative 'the_date'
 require_relative 'account_management'
+require_relative 'print_statement'
+
 # Statment to show date, amount, balance
 class Statement
   attr_reader :account_statement, :account_management
 
-  def initialize(account_management = AccountManagement.new)
+  def initialize(account_management = AccountManagement.new, print_statement = PrintStatement.new)
     @account_statement = []
     @account_management = account_management
+    @print_statement = print_statement
   end
 
   def deposit_statement(new_date, amount)
@@ -23,5 +26,9 @@ class Statement
       Debit: account_management.withdraw(amount),
       Balance: account_management.total_balance
     })
+  end
+
+  def show_statement
+    @print_statement.my_statement(account_statement)
   end
 end
