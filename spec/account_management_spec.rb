@@ -26,4 +26,8 @@ describe AccountManagement do
   it 'User enters a valid_amount' do
     expect(subject.valid_amount(100)).to eq format('%.2f', 100)
   end
+
+  it 'Error if number is less than 0' do
+    expect { subject.valid_amount(-10) }.to raise_error(RuntimeError)
+  end
 end

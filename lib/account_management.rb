@@ -24,7 +24,7 @@ class AccountManagement
 
   def valid_amount(amount)
     raise 'Please input a valid number' \
-    unless (amount.is_a? Float) || (amount.is_a? Integer)
+    unless ((amount.is_a? Float) || (amount.is_a? Integer) && amount > 0)
 
     num = format('%.2f', amount)
     num
