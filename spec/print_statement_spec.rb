@@ -10,8 +10,12 @@ describe PrintStatement do
   end
 
   it "Prints a deposit_statement" do
-    statement.deposit_statement('10/01/2012', 1000)
+    statement.deposit_statement('10/01/2012', 1000.00)
     expect {subject.my_statement(my_acc)}.to output("date || credit || debit || balance\n"\
-    "10/01/2012 || 1000 ||  || 1000\n").to_stdout
+    "10/01/2012 || 1000.00 ||  || 1000.00\n").to_stdout
+  end
+
+  it 'format_num returns a number to two decimals' do
+    expect(subject.format_num(10.99)).to eq ("10.99")
   end
 end
