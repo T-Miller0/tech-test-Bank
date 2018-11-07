@@ -79,6 +79,6 @@ I would like to see all my transactions
 # Author
 Tom Miller
 
-
+# Model
 
 ![alt text](https://github.com/T-Miller0/models/blob/master/Bank_model.png)
