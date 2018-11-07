@@ -40,9 +40,9 @@ Simplecov
 
 # User Stories
 
-In order to view the sum . 
-As a user . 
-I would like to view my balance
+In order to view the sum   
+As a user  
+I would like to view my balance<br>
 
 In order to view the new sum
 As a user
