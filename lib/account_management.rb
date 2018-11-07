@@ -14,15 +14,19 @@ class AccountManagement
   end
 
   def withdraw(amount)
-      amount = valid_amount(amount)
-      fail "Insufficient funds, balance is #{@balance}" if ((@balance -= amount.to_f) < 0)
-      @total_balance -= amount.to_f
-      @balance = amount.to_f
+    amount = valid_amount(amount)
+    raise "Insufficient funds, balance is #{@balance}" \
+    if (@balance -= amount.to_f) < 0
+
+    @total_balance -= amount.to_f
+    @balance = amount.to_f
   end
 
   def valid_amount(amount)
-    fail "Please input a valid number" unless (amount.is_a? Float) || (amount.is_a? Integer)
-    num = '%.2f' % amount
-    return num
+    raise 'Please input a valid number' \
+    unless ((amount.is_a? Float) || (amount.is_a? Integer) && amount > 0)
+
+    num = format('%.2f', amount)
+    num
   end
 end

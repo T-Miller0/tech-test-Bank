@@ -1,3 +1,4 @@
+# PrintStatement formats account_statement
 class PrintStatement
   def my_statement(account_statement)
     puts 'date || credit || debit || balance'
