@@ -12,18 +12,18 @@ describe AccountManagement do
   end
 
   it 'Error if total_balance is negative' do
-    expect{subject.withdraw(50)}.to raise_error(RuntimeError)
+    expect { subject.withdraw(50) }.to raise_error(RuntimeError)
   end
 
   it 'Error if inputs a withdraw that is not a interger or float ' do
-    expect{subject.withdraw("hello")}.to raise_error(RuntimeError)
+    expect { subject.withdraw('hello') }.to raise_error(RuntimeError)
   end
 
   it 'Error if inputs a top_up that is not a interger or float ' do
-    expect{subject.top_up("Goodbye")}.to raise_error(RuntimeError)
+    expect { subject.top_up('Goodbye') }.to raise_error(RuntimeError)
   end
 
   it 'User enters a valid_amount' do
-    expect(subject.valid_amount(100)).to eq ('%.2f' % 100)
+    expect(subject.valid_amount(100)).to eq format('%.2f', 100)
   end
 end
