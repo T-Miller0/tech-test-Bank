@@ -78,3 +78,7 @@ I would like to see all my transactions
 
 # Author
 Tom Miller
+
+
+Inline-style: 
+![alt text](file:///Users/tommiller/Downloads/Bank_model.html)
