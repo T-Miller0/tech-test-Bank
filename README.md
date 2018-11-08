@@ -22,14 +22,14 @@ To run the tests go to the terminal and type $ rubocop
 To interact;
 
 1. Open IRB, to do so type in the terminal $ irb
-2. require "./lib/print_statement.rb"
+2. require "./lib/statement.rb"
 3. statement = Statement.new
 4. statement.deposit_statement("02/10/2020", 1000)
 or statement.withdrawal_statement("02/10/2020", 1000)  
 "02/10/2020" is to be your desired date  
 1000 is to be your desired input  
 You may repeat step 4 as desired  
-5. printer.my_statement(statement.account_statement)
+5. statement.show_statement
 This will show you your account statement
 
 # Built with
