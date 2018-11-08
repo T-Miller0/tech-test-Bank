@@ -15,8 +15,8 @@ class AccountManagement
 
   def withdraw(amount)
     amount = valid_amount(amount)
-    raise "Insufficient funds, balance is #{@balance}" \
-    if (@balance -= amount.to_f) < 0
+    raise "Insufficient funds, balance would be #{@balance}" \
+    if ((@total_balance - amount.to_f) < 0)
 
     @total_balance -= amount.to_f
     @balance = amount.to_f
